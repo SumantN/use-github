@@ -1,0 +1,23 @@
+
+
+def check_license_eligibility():
+    try:
+        # Get the user's age as input
+        age = int(input("Enter your age: "))
+
+        # Minimum legal driving age
+        minimum_age = 18
+
+        # Check eligibility
+        if age < 0:
+            print("Age cannot be negative. Please enter a valid age.")
+        elif age < minimum_age:
+            print(f"You are not eligible for a driving license. You need to wait {minimum_age - age} more years.")
+        else:
+            print("Congratulations! You are eligible for a driving license.")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value for age.")
+
+# Run the program
+if __name__ == "__main__":
+    check_license_eligibility()
